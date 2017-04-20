@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30.01.2017, 7:36:57
+    Author     : Mikhaylov
+*/
+
+.m-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto; 
+    background: radial-gradient(farthest-side circle at 65% 25%, white, darkblue);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.3), -5px -10px 20px rgba(255,255,255,0.5);
+}
+
+.m-title {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-family: Arial;
+    text-align: center;
+    font-size: 25px;
+//    font-size: calc(2vw + 2vh + 2vmin);
+}

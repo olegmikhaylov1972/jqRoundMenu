@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Circle JQ menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="js/jq/jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="css/menu.css">
+        
+        <script type="text/javascript" src="js/jq/jquery-1.12.1.js"></script>
+        <script type="text/javascript" src="js/jq/jquery-ui/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/roundMenu.js"></script>
+        <script type="text/javascript" src="js/Point2D.js"></script>
+        <script type="text/javascript" src="js/Intersection.js"></script>
+
+        <script type='text/javascript'>
+            $(document).ready(function() {
+                $("#menu").roundMenu();
+                $("#menu").roundMenu('appendItem', {text: 'Сохранить', img: 'img/file_save.png', color: 'Plum', callback: 'test', subMenu: [
+                                                                                                                                    {text: 'Пункт 1', img: '', callback: null}, 
+                                                                                                                                    {text: 'Пункт 2', img: '', callback: null},
+                                                                                                                                    {text: 'Пункт 3', img: '', callback: null},
+                                                                                                                                    {text: 'Пункт 4', img: '', callback: null}
+                                                                                                                                   ]
+                                                    });
+                $("#menu").roundMenu('appendItem');
+                $("#menu").roundMenu('appendItem', {color: 'Plum', callback: 'test', subMenu: [
+                                                                                                                                    {text: 'Пункт 1', img: '', callback: null}, 
+                                                                                                                                    {text: 'Пункт 2', img: '', callback: null},
+                                                                                                                                    {text: 'Пункт 3', img: '', callback: null},
+                                                                                                                                    {text: 'Пункт 4', img: '', callback: null}
+                                                                                                                                   ]
+                                                    });
+                $("#menu").roundMenu('appendItem');
+                $("#menu").roundMenu('appendItem', {color: 'Plum', callback: 'test', smType: 'img', subMenu: [
+                                                                                                                                    {text: 'Пункт 1', img: 'img/file_save.png', callback: null}, 
+                                                                                                                                    {text: 'Пункт 2', img: 'img/file_save.png', callback: null},
+                                                                                                                                    {text: 'Пункт 3', img: 'img/file_save.png', callback: null}
+                                                                                                                                   ]
+                                                    });
+                $("#menu").roundMenu('appendItem');
+                $("#menu").roundMenu('appendItem');
+                $("#menu").roundMenu('appendItem', {color: 'Plum', callback: 'test', smType: 'img', subMenu: [
+                                                                                                                                    {text: 'Пункт 1', img: 'img/file_save.png', callback: null}, 
+                                                                                                                                    {text: 'Пункт 2', img: 'img/file_save.png', callback: null},
+                                                                                                                                    {text: 'Пункт 3', img: 'img/file_save.png', callback: null}
+                                                                                                                                   ]
+                                                    });
+            });
+            
+            function test(e) {
+                alert('test');
+            }
+        </script>
+        
+    </head>
+    <body>
+        <p class="inf"></p>
+        <div id="menu">
+        </div>
+    </body>
+</html>
